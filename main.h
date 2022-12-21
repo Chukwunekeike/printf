@@ -16,31 +16,30 @@
 
 #define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
-#define CONVERT_LOWERCASE	1
-#define CONVERT_UNSIGNED	2
+#define CONVERT_LOWERCASE  1
+#define CONVERT_UNSIGNED   2
 
 /**
- * struct parameters - parameters struct
+ * struct paramters - parameters struct
  *
  * @unsign: flag if unsigned value
- *
- * @plus_flag: on if plus_flag specified
- * @space_flag: on if hashtag_flag specified
- * @hashtag_flag: on if _flag specified
- * @zero_flag: on if _flag specified
- * @minus_flag: on if _flag specified
+ * @plus_flag: on if plus_flag is specified
+ * @space_flag: on if hashtaflag is sprcified
+ * @hashtag_flag: on of _flag os specified
+ * @zero_flag: on if 0 flag is specified
+ * @minus_flag: on if - flag is specified
  *
  * @width: field width specified
- * @precision: field precision specified
+ * @precision: precision specified
  *
- * @h_modifier: on if h_modifier is specified
- * @l_modifier: on if l_modifier is specified
+ * @h_modifier: on if speicied
+ * @l_modifier: on if sepcified
  *
  */
 
 typedef struct parameters
 {
-	unsigned int unsign			: 1;
+	unsigned int unsign		: 1;
 
 	unsigned int plus_flag		: 1;
 	unsigned int space_flag		: 1;
@@ -56,10 +55,10 @@ typedef struct parameters
 } params_t;
 
 /**
- * struct specifier - Struct token
+ * struct specifier - struct token
  *
  * @specifier: format token
- * @f: The function associated
+ * @f: the function associated
  */
 typedef struct specifier
 {
@@ -111,7 +110,7 @@ int print_number_left_shift(char *str, params_t *params);
 /* params.c module */
 void init_params(params_t *params, va_list ap);
 
-/* string_fields.c modoule */
+/* string_fields.c module */
 char *get_precision(char *p, params_t *params, va_list ap);
 
 /* _prinf.c module */
